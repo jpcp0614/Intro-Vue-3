@@ -9,6 +9,11 @@
       <li>VueJS</li>
     </ul>
     <!-- v-show simplifica o v-if/v-else -->
+
+    <div>
+      <button @click="showEmail">Mostrar e-mail</button>
+    </div>
+
     <p v-show="show_email">Mande um mensagem para: {{ email }}</p>
     <br>
     <p>Para acessar o meu portfolio, <a v-bind:href="my_portfolio" target="_blank">clique aqui</a> </p>
@@ -33,6 +38,11 @@ export default {
   },
   components: {
     Picture,
+  },
+  methods: {
+    showEmail () {
+      console.log("testando email...")
+    }
   }
 }
 </script>
