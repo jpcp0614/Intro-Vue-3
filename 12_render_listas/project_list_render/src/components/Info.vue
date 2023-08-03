@@ -3,12 +3,15 @@
     <!-- v-else tem que ficar sempre abaixo do v-if -->
     <p v-if="studying">Estou estudando no momento.</p>
     <p v-else>Não estou estudando mais</p>
-    <p>Utilizo as seguinte tecnologias:</p>
+    <p>Utilizo as seguinte tecnologias para back-end:</p>
     <ul>
-      <li>JavaScript</li>
-      <li>VueJS</li>
+      <li v-for="(tech, index) in back_tech" v-bind:key="index">{{ tech }}</li>
     </ul>
-    <!-- v-show simplifica o v-if/v-else -->
+    <br>
+    <p>Utilizo as seguintes tecnologias para front-end:</p>
+    <ul>
+      <li v-for="tech in front_tech" :key="tech.id">{{ tech.language }}</li>
+    </ul>
 
     <div>
       <button @click="showEmail">{{ textoBotao }}</button>
@@ -26,6 +29,14 @@
 
 import Picture from './Picture';
 
+const back_tech = ['JavaScript', 'SQL', 'Python'];
+
+const front_tech = [
+  { id: 1, language: 'JavaScript' },
+  { id: 2, language: 'TypeScript' },
+  { id: 3, language: 'Ruby' },
+];
+
 export default {
   name: 'Info',
   data () {
@@ -35,6 +46,8 @@ export default {
       email: 'info@email.com',
       my_portfolio: 'https://google.com',
       textoBotao: 'Mostrar e-mail',
+      back_tech: back_tech,
+      front_tech: front_tech,
     }
   },
   components: {
