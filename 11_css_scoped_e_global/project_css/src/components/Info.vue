@@ -16,7 +16,7 @@
 
     <p v-show="show_email">Mande um mensagem para: {{ email }}</p>
     <br>
-    <p>Para acessar o meu portfolio, <a v-bind:href="my_portfolio" target="_blank">clique aqui</a> </p>
+    <p class="portfolio-class">Para acessar o meu portfolio, <a v-bind:href="my_portfolio" target="_blank">clique aqui</a> </p>
     <br>
     <Picture />
   </div>
@@ -52,3 +52,10 @@ export default {
   }
 }
 </script>
+
+<style>
+  .paragrafo-pai-class {
+    color: blueviolet;
+    font-size: 20px;
+  }
+</style>
