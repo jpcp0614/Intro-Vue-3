@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Header />
     <FirstComponent />
     <p class="paragrafo-pai-class">Parágrafo Pai</p>
     <LifeCycle />
@@ -11,6 +12,7 @@
   import FirstComponent from './components/FirstComponent';
   import LifeCycle from './components/LifeCycle';
   import Person from './components/Person';
+  import Header from './components/Header';
 
   export default {
     name: 'App',
@@ -18,6 +20,7 @@
       FirstComponent,
       LifeCycle,
       Person,
+      Header,
     }
   }
 </script>
