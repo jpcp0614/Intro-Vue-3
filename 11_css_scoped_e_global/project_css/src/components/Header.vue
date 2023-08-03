@@ -15,13 +15,23 @@ export default {
 </script>
 
 <style scoped>
+  div {
+    background-color: darkgray;
+    height: 50px;
+    width: 500px;
+  }
+
   ul {
     list-style: none;
     display: flex;
+    font-size: 25px;
+    justify-content: center;
+    padding: 10px 0 0 0;
+    margin: 0;
   }
 
   li {
-    margin-right: 10px;
+    margin: auto;
   }
 
   a {
