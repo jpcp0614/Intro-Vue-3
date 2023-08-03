@@ -11,7 +11,7 @@
     <!-- v-show simplifica o v-if/v-else -->
 
     <div>
-      <button @click="showEmail">Mostrar e-mail</button>
+      <button @click="showEmail">{{ textoBotao }}</button>
     </div>
 
     <p v-show="show_email">Mande um mensagem para: {{ email }}</p>
@@ -31,9 +31,10 @@ export default {
   data () {
     return {
       studying: true,
-      show_email: true,
+      show_email: false,
       email: 'info@email.com',
       my_portfolio: 'https://google.com',
+      textoBotao: 'Mostrar e-mail',
     }
   },
   components: {
@@ -41,7 +42,12 @@ export default {
   },
   methods: {
     showEmail () {
-      console.log("testando email...")
+      this.show_email = !this.show_email; //* Quando clico, aparece...se clicar novamente, esconde
+      if (!this.show_email) {
+        this.textoBotao = 'Mostrar e-mail';
+      } else {
+        this.textoBotao = 'Ocultar e-mail';
+      }
     }
   }
 }
