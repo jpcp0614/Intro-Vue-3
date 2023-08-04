@@ -7,7 +7,7 @@
 
 <script>
 export default {
-  name: 'MultiplosEventos',
+  name: 'MultiplyEvents',
   data() {
     return {
       multiplos_eventos: "",

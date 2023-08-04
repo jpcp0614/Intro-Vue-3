@@ -3,18 +3,18 @@
     <h1>{{ framework }}</h1>
     <h3>The language used is: {{ language }}</h3>
 
-    <MultiplosEventos />
+    <MultiplyEvents />
   </div>
 </template>
 
 <script>
 
-  import MultiplosEventos from './MultiplosEventos';
+  import MultiplyEvents from './MultiplyEvents';
 
   export default {
     name: 'FirstComponent',
     components: {
-      MultiplosEventos,
+      MultiplyEvents,
     },
     data () {
       return {
