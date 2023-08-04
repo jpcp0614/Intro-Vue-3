@@ -1,6 +1,7 @@
 <template>
-  <div>
+  <main>
     <h2>Meu formulário</h2>
+
     <form action="">
       <div>
         <InputText />
@@ -12,7 +13,7 @@
         <Submit />
       </div>
     </form>
-  </div>
+  </main>
 </template>
 
 <script>
@@ -25,6 +26,11 @@
     components: {
       InputText,
       Submit
+    },
+    methods: {
+      enviarForm() {
+        console.log('Enviou o formulário');
+      }
     }
   }
 </script>

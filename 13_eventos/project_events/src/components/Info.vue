@@ -56,6 +56,7 @@ export default {
   methods: {
     showEmail () {
       this.show_email = !this.show_email; //* Quando clico, aparece...se clicar novamente, esconde
+      console.log('Clicou');
       if (!this.show_email) {
         this.textoBotao = 'Mostrar e-mail';
       } else {
