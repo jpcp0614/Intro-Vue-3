@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Header />
+    <Header :logged="true"/>
     <FirstComponent />
     <p class="paragrafo-pai-class">Parágrafo Pai</p>
     <LifeCycle />
