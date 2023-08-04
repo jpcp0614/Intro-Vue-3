@@ -8,8 +8,14 @@
 </template>
 
 <script>
+
+  import MultiplosEventos from './MultiplosEventos';
+
   export default {
     name: 'FirstComponent',
+    components: {
+      MultiplosEventos,
+    },
     data () {
       return {
         language: 'JavaScript',
