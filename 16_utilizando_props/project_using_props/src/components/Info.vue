@@ -1,5 +1,6 @@
 <template>
   <div>
+    <p>Meu email enviado por props: {{ compEmail }}</p>
     <!-- v-else tem que ficar sempre abaixo do v-if -->
     <p v-if="studying">Estou estudando no momento.</p>
     <p v-else>Não estou estudando mais</p>
@@ -39,11 +40,14 @@ const front_tech = [
 
 export default {
   name: 'Info',
+  props: {
+    compEmail: String,
+    email: String,
+    studying: Boolean,
+  },
   data () {
     return {
-      studying: true,
       show_email: false,
-      email: 'info@email.com',
       my_portfolio: 'https://google.com',
       textoBotao: 'Mostrar e-mail',
       back_tech: back_tech,
